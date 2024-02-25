@@ -1,0 +1,288 @@
+/* Root */
+:root {
+  --menu-bg: #8c0813;
+  --menu-color: #fff;
+}
+/* ! Reset */
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style-type: none;
+}
+img {
+  height: auto;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.8rem;
+}
+h6 {
+  font-size: 0.6rem;
+}
+a {
+  text-decoration: none;
+}
+
+/*  -----------------------
+CONTENITORE GENERALE
+--------------------------- */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*  ----------------------------
+        IMMAGINE DI SFONDO
+-------------------------------- */
+.bg-img {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 0;
+  opacity: 0.5;
+}
+/*  ------
+    MENU
+---------- */
+.header {
+  background-color: var(--menu-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  padding: 0px 15px;
+}
+
+.header__content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo:hover{
+  transform: scale(1.2);
+}
+
+.header__logo,
+.header__quick {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: var(--menu-color);
+  transition: 0.3s;
+}
+
+.header__quick a {
+  color: var(--menu-color);
+  transition: 0.3s;
+}
+
+.header__menu {
+  padding: 0;
+  margin: 0;
+}
+
+.header__menu li {
+  display: inline-block;
+}
+
+.header__menu li a {
+  color: var(--menu-color);
+  opacity: 0.8;
+  display: block;
+  padding: 16px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.header__menu li a:hover,
+.header__quick a:hover {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff,
+    0 0 120px #fff;
+}
+
+/* Section */
+.section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+  z-index: 1;
+}
+
+.title-section {
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  padding: clamp(80px, 4vw, 300px);
+  font-size: clamp(20px, 4vw, 50px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: scale(1);
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.4, 1);
+  opacity: 0;
+}
+
+.section.in-page .title-section {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.main-title {
+  text-shadow: 0 0 10px #8c0813, 0 0 20px #8c0813, 0 0 40px #8c0813,
+    0 0 80px #8c0813, 0 0 120px #8c0813;
+  -webkit-text-stroke: 3px #8c0813;
+  font-family: "Dancing Script", cursive;
+  font-size: 150px;
+  font-weight: 900;
+}
+
+/* Section Footer Page */
+.section-footer {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: whitesmoke;
+  box-shadow: 6px 6px 12px #000000, -6px -6px 12px #000000;
+}
+
+section {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.832) 0%,
+      rgba(0, 0, 0, 0.728) 100%
+    ),
+    url(/img/ico/puntuale&pulito.png) center center;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10vh);
+  transition: all 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.fade-in.in-page {
+  opacity: 1;
+  transform: translateY(0vh);
+}
+
+.img-laundry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.img-preview {
+  border-radius: 5px;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.img-preview img {
+  width: 130%;
+}
+/*  -------------------
+        Footer Page
+----------------------- */
+/******* MODIFICHE AL FOOTER DELLA PAGINA ********/
+.footer-page {
+  width: 100%;
+  position: relative;
+  background-color: #8c0813;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  font-size: medium;
+  z-index: 2;
+}
+.footer-page a {
+  color: grey;
+  transition: 0.5s;
+}
+.footer-page a:hover {
+  color: #1f6feb;
+  transition: 0.5s;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.icons-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  gap: 30px;
+}
+
+.icons-footer #instagram {
+  filter: brightness(0.5) invert(1);
+  transition: 0.3s;
+}
+
+.icons-footer #instagram:hover {
+  filter: brightness(1) invert(0);
+}

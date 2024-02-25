@@ -1,0 +1,74 @@
+/*  ----------------------------------
+            MENU RESPONSIVE
+-------------------------------------- */
+@media (max-width: 768px) {
+  .header__menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #8c0813;
+    width: 100%;
+    height: 0vh;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .header__menu li {
+    width: 100%;
+    border-bottom: 1px solid #ffffff;
+  }
+  .menu-open .header__menu {
+    height: 30vh;
+    padding: 3%;
+  }
+
+  .icon-hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+  }
+
+  .icon-hamburger span {
+    height: 2px;
+    width: 30px;
+    border-radius: 5px;
+    background: var(--menu-color);
+    position: relative;
+    display: block;
+    margin: 5px;
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .menu-open .icon-hamburger span:nth-child(1) {
+    transform: rotate(45deg) translateY(9px);
+  }
+  .menu-open .icon-hamburger span:nth-child(2) {
+    display: none;
+  }
+  .menu-open .icon-hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-9px);
+  }
+
+  .header__quick {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    width: 50%;
+  }
+
+  /* Setion Title */
+  .main-title {
+    font-size: 70px;
+    -webkit-text-stroke: 1px #8c0813;
+  }
+
+  /* Section Footer */
+  .img-preview {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
